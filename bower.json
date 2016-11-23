@@ -1,0 +1,13 @@
+{
+  "name": "backbone-form-application",
+  "authors": [
+    "Shankariya, Saurabh <sshankariya@gmail.com>"
+  ],
+  "description": "Simple BackboneJS Form application",
+  "dependencies": {
+    "bootstrap": "~3.1.0",
+    "backbone": "~1.1.0",
+    "jquery": "~2.1.0",
+    "underscore": "~1.5.2"
+  }
+}

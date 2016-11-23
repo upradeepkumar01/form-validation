@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact Us</title>
+    <link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <link href="app/css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <header class="bs-header">
+      <div class="container">
+        <h1>Contact US</h1>
+        <p>A BackboneJS based application</p>
+      </div>
+    </header>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 main-container">
+        </div>
+      </div>
+    </div>
+
+    <script type="text/template" id="tpl-basic-contact">
+      
+      <h2 class="page-header text-center">Basic Information</h2>
+      <form role="form" class="form-horizontal basic-form">
+        <div class="form-group">
+          <label class="col-sm-4 control-label">First Name:</label>
+          <div class=" col-sm-3">
+            <input type="text" required class="form-control contact-fName-input" value="<%- fName %>">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-sm-4 control-label">Last Name:</label>
+          <div class="col-sm-3">
+            <input type="text" required class="form-control contact-lName-input" value="<%- lName %>">
+          </div>
+        </div>
+        <br>
+        <div class="form-group">
+          <div class="col-sm-offset-4 col-sm-3">
+            <button type="submit" class="btn btn-outline btn-lg btn-block">Next</button>
+          </div>
+          
+        </div>
+      </form>
+    </script>
+
+    <script type="text/template" id="tpl-address-details">
+      <h2 class="page-header text-center">Address Details</h2>
+      <form role="form" class="form-horizontal address-form">
+        <div class="form-group">
+          <label class="col-sm-4 control-label">Address One:</label>
+          <div class="col-sm-3">
+            <input type="text" required class="form-control contact-addrOne-input" value="<%- addressOne %>">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-sm-4 control-label">Address Two:</label>
+          <div class="col-sm-3">
+            <input type="text"  class="form-control contact-addrTwo-input" value="<%- addressTwo %>">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-sm-4 control-label">City:</label>
+          <div class="col-sm-3">
+            <input type="text" required class="form-control contact-city-input" value="<%- city %>">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-sm-4 control-label">State:</label>
+          <div class="col-sm-3">
+            <input type="text" required class="form-control contact-state-input" value="<%- state %>">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-sm-4 control-label">Country:</label>
+          <div class="col-sm-3">
+            <input type="text" required class="form-control contact-country-input" value="<%- country %>">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-sm-4 control-label">ZipCode:</label>
+          <div class="col-sm-3">
+            <input type="number" required class="form-control contact-zipcode-input" value="<%- zipcode %>">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-offset-4 col-sm-3">
+            <button type="submit" class="btn btn-outline btn-lg btn-block">Submit</button>
+          </div>
+        
+        </div>
+      </form>
+    </script>
+    
+    <script type="text/template" id="tpl-success">
+    <br><br>
+        <div class="alert alert-success">
+            <span>Congratulations ! Your contact details has been submitted successfully. <strong><em><a href="" class="redirectToHome">Click Here</a></em></strong> to add another.</span>
+        </div>
+    </script>
+    
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/underscore/underscore.js"></script>
+    <script src="bower_components/backbone/backbone.js"></script>
+
+    <script src="app/js/app.js"></script>
+    <script src="app/js/models/contact.js"></script>
+    <script src="app/js/collections/contacts.js"></script>
+    <script src="app/js/views/basicForm.js"></script>
+    <script src="app/js/views/addressForm.js"></script>
+    <script src="app/js/views/successView.js"></script>
+    <script src="app/js/router.js"></script>
+
+    <script>
+      $(function() {
+        ContactManager.start();
+      });
+    </script>
+
+  </body>
+</html>

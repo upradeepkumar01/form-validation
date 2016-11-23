@@ -1,0 +1,58 @@
+.bs-header {
+  position: relative;
+  padding: 30px 15px;
+  font-size: 20px;
+  color: #515151;
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(0,0,0,.1);
+  background-color: #999966;
+  background-image: -webkit-linear-gradient(top, #999966 0%, #999966 100%);
+  background-image: linear-gradient(to bottom, #999966 0%, #999966 100%);
+  background-repeat: repeat-x;
+  
+}
+
+.bs-header h1 {
+  margin-top: 0;
+  color: #fff;
+}
+
+.bs-header p {
+  margin-bottom: 0;
+  font-weight: 300;
+  line-height: 1.4;
+}
+
+.btn-outline {
+  color: #999966;
+  background-color: transparent;
+  border-color: #999966;
+}
+
+.btn-outline:hover,
+.btn-outline:focus,
+.btn-outline:active {
+  color: #fff;
+  background-color: #999966;
+  border-color: #999966;
+}
+
+a {
+  color: #999966;
+}
+
+a:hover,
+a:focus {
+  color: #1d1429;
+}
+
+a.thumbnail:hover,
+a.thumbnail:focus,
+a.thumbnail.active {
+  border-color: #999966;
+}
+
+.basic-form,
+.address-form {
+    padding-left: 10%;
+}
